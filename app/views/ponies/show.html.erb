@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pony.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @pony.age %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @pony.height %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @pony.colour %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @pony.rate %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@pony.picture_url, :width => 600) if @pony.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_pony_path(@pony) %> |
+<%= link_to 'Back', ponies_path %>

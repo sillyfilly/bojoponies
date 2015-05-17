@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ponies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Height</th>
+      <th>Colour</th>
+      <th>Rate</th>
+      <th>Picture</th>
+      <th>Stable</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ponies.each do |pony| %>
+      <tr>
+        <td><%= pony.name %></td>
+        <td><%= pony.age %></td>
+        <td><%= pony.height %></td>
+        <td><%= pony.colour %></td>
+        <td><%= pony.rate %></td>
+        <td><%= pony.picture %></td>
+        <td><%= pony.stable.name if pony.stable %></td>
+        <td><%= link_to 'Show', pony %></td>
+        <td><%= link_to 'Edit', edit_pony_path(pony) %></td>
+        <td><%= link_to 'Destroy', pony, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pony', new_pony_path %>

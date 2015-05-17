@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stable.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @stable.location %>
+</p>
+
+<% @stable.ponies.each do |pony| %>
+
+<%= image_tag(pony.picture_url, :width => 600) if pony.picture.present? %>
+
+<% end %>
+
+<%= link_to 'Edit', edit_stable_path(@stable) %> |
+<%= link_to 'Back', stables_path %>
