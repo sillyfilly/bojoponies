@@ -9,7 +9,7 @@ if Rails.env.production?
       region:                'eu-west-1'                   # optional, defaults to 'us-east-1'
       
     }
-    config.fog_directory  = 'name_of_directory'                          # required
+    config.fog_directory  = 'bojoponies-production'                          # required
     config.fog_public     = false                                        # optional, defaults to true
     config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" } # optional, defaults to {}
   end
