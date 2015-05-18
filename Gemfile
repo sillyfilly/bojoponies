@@ -11,7 +11,6 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-gem "fog"
 gem "fog-aws"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -36,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-gem 'carrierwave'
+gem 'carrierwave', github: "carrierwaveuploader/carrierwave"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
